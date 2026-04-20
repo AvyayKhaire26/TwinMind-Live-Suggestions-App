@@ -1,0 +1,96 @@
+﻿2026-04-20 18:53:56 [32minfo[39m: GroqService Singleton instance created
+2026-04-20 18:53:56 [32minfo[39m: Inside GroqService generateSuggestions()
+2026-04-20 18:53:56 [31merror[39m: Error in GroqService generateSuggestions()
+2026-04-20 18:53:56 [31merror[39m: TypeError: Cannot read properties of undefined (reading 'completions')
+    at GroqService.generateSuggestions (C:\Users\avyay\OneDrive\Desktop\TwinMind-Live-Suggestions-App\backend\src\services\GroqService.ts:77:46)
+    at Object.<anonymous> (C:\Users\avyay\OneDrive\Desktop\TwinMind-Live-Suggestions-App\backend\src\__tests__\GroqService.test.ts:32:43)
+    at Promise.finally.completed (C:\Users\avyay\OneDrive\Desktop\TwinMind-Live-Suggestions-App\backend\node_modules\jest-circus\build\jestAdapterInit.js:1557:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (C:\Users\avyay\OneDrive\Desktop\TwinMind-Live-Suggestions-App\backend\node_modules\jest-circus\build\jestAdapterInit.js:1497:10)
+    at _callCircusTest (C:\Users\avyay\OneDrive\Desktop\TwinMind-Live-Suggestions-App\backend\node_modules\jest-circus\build\jestAdapterInit.js:1007:40)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at _runTest (C:\Users\avyay\OneDrive\Desktop\TwinMind-Live-Suggestions-App\backend\node_modules\jest-circus\build\jestAdapterInit.js:947:3)
+    at C:\Users\avyay\OneDrive\Desktop\TwinMind-Live-Suggestions-App\backend\node_modules\jest-circus\build\jestAdapterInit.js:849:7
+    at _runTestsForDescribeBlock (C:\Users\avyay\OneDrive\Desktop\TwinMind-Live-Suggestions-App\backend\node_modules\jest-circus\build\jestAdapterInit.js:862:11)
+    at _runTestsForDescribeBlock (C:\Users\avyay\OneDrive\Desktop\TwinMind-Live-Suggestions-App\backend\node_modules\jest-circus\build\jestAdapterInit.js:857:11)
+    at run (C:\Users\avyay\OneDrive\Desktop\TwinMind-Live-Suggestions-App\backend\node_modules\jest-circus\build\jestAdapterInit.js:761:3)
+    at runAndTransformResultsToJestFormat (C:\Users\avyay\OneDrive\Desktop\TwinMind-Live-Suggestions-App\backend\node_modules\jest-circus\build\jestAdapterInit.js:1918:21)
+    at jestAdapter (C:\Users\avyay\OneDrive\Desktop\TwinMind-Live-Suggestions-App\backend\node_modules\jest-circus\build\runner.js:101:19)
+    at runTestInternal (C:\Users\avyay\OneDrive\Desktop\TwinMind-Live-Suggestions-App\backend\node_modules\jest-runner\build\testWorker.js:275:16)
+    at runTest (C:\Users\avyay\OneDrive\Desktop\TwinMind-Live-Suggestions-App\backend\node_modules\jest-runner\build\testWorker.js:343:7)
+    at Object.worker (C:\Users\avyay\OneDrive\Desktop\TwinMind-Live-Suggestions-App\backend\node_modules\jest-runner\build\testWorker.js:497:12)
+node.exe : FAIL src/__tests__/GroqService.test.ts
+At C:\Users\avyay\AppData\Roaming\npm\npx.ps1:24 
+char:5
++     & "node$exe"  
+"$basedir/node_modules/npm/bin/npx-cli.js" $args
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (FAIL src 
+   /__tests__/GroqService.test.ts:String) [], Remote  
+  Exception
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  GroqService Tests
+    ΓêÜ getInstance should return a singleton (4 ms)
+    ├ù generateSuggestions should parse JSON 
+successfully (10 ms)
+
+  ΓùÅ GroqService Tests ΓÇ║ generateSuggestions 
+should parse JSON successfully
+
+    Failed to generate suggestions: Cannot read 
+properties of undefined (reading 'completions')
+
+    [0m [90m 102 |[39m             
+logger[33m.[39merror([32m"Error in GroqService 
+generateSuggestions()"[39m)[33m;[39m
+     [90m 103 |[39m             
+logger[33m.[39merror(error)[33m;[39m
+    [31m[1m>[22m[39m[90m 104 |[39m             
+[36mthrow[39m [36mnew[39m 
+[33mAppError[39m([32m`Failed to generate 
+suggestions: ${error?.message || 'Unknown 
+error'}`[39m[33m,[39m [35m500[39m)[33m;[39m
+     [90m     |[39m                   
+[31m[1m^[22m[39m
+     [90m 105 |[39m         }
+     [90m 106 |[39m     }
+     [90m 107 |[39m[0m
+
+      at GroqService.generateSuggestions 
+(src/services/GroqService.ts:104:19)
+      at Object.<anonymous> 
+(src/__tests__/GroqService.test.ts:32:43)
+
+2026-04-20 18:53:58 [32minfo[39m: ::ffff:127.0.0.1 - - [20/Apr/2026:13:23:58 +0000] "GET /health HTTP/1.1" 200 55 "-" "-"
+2026-04-20 18:53:58 [32minfo[39m: Validating Groq API Key for route /api/v1/suggestions
+2026-04-20 18:53:58 [31merror[39m: Validation Failed: Missing or invalid Authorization header in /api/v1/suggestions
+2026-04-20 18:53:58 [31merror[39m: [Error] 401 - Missing or invalid Groq API Key in Authorization header - /api/v1/suggestions - POST - ::ffff:127.0.0.1
+2026-04-20 18:53:58 [32minfo[39m: ::ffff:127.0.0.1 - - [20/Apr/2026:13:23:58 +0000] "POST /api/v1/suggestions HTTP/1.1" 401 86 "-" "-"
+2026-04-20 18:53:58 [32minfo[39m: Validating Groq API Key for route /api/v1/chat
+2026-04-20 18:53:58 [31merror[39m: Validation Failed: Missing or invalid Authorization header in /api/v1/chat
+2026-04-20 18:53:58 [31merror[39m: [Error] 401 - Missing or invalid Groq API Key in Authorization header - /api/v1/chat - POST - ::ffff:127.0.0.1
+2026-04-20 18:53:58 [32minfo[39m: ::ffff:127.0.0.1 - - [20/Apr/2026:13:23:58 +0000] "POST /api/v1/chat HTTP/1.1" 401 86 "-" "-"
+2026-04-20 18:53:58 [32minfo[39m: Validating Groq API Key for route /api/v1/transcribe
+2026-04-20 18:53:58 [31merror[39m: Validation Failed: Missing or invalid Authorization header in /api/v1/transcribe
+2026-04-20 18:53:58 [31merror[39m: [Error] 401 - Missing or invalid Groq API Key in Authorization header - /api/v1/transcribe - POST - ::ffff:127.0.0.1
+2026-04-20 18:53:58 [32minfo[39m: ::ffff:127.0.0.1 - - [20/Apr/2026:13:23:58 +0000] "POST /api/v1/transcribe HTTP/1.1" 401 86 "-" "-"
+PASS src/__tests__/app.test.ts
+  App API Endpoints
+    ΓêÜ GET /health should return 200 OK (47 ms)
+    ΓêÜ POST /api/v1/suggestions should return 401 
+without API Key (18 ms)
+    ΓêÜ POST /api/v1/chat should return 401 without 
+API Key (6 ms)
+    ΓêÜ POST /api/v1/transcribe should return 401 
+without API Key (4 ms)
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        4.284 s
+Ran all test suites.
+Force exiting Jest: Have you considered using 
+`--detectOpenHandles` to detect async operations that 
+kept running after all tests finished?

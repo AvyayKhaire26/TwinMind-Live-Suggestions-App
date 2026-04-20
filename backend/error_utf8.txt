@@ -1,0 +1,203 @@
+﻿node.exe : [0m[7m[1m[31m FAIL [39m[22m[27m[0m 
+[2msrc/__tests__/[22m[1mGroqService.test.ts[22m
+At C:\Users\avyay\AppData\Roaming\npm\npx.ps1:24 
+char:5
++     & "node$exe"  
+"$basedir/node_modules/npm/bin/npx-cli.js" $args
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([0m[7m 
+   [1m[3...ce.test.ts[22m:String) [], RemoteExcep  
+  tion
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  [1mΓùÅ [22mTest suite failed to run
+
+    [96msrc/__tests__/GroqService.test.ts[0m:[93m3
+[0m:[93m1[0m - [91merror[0m[90m TS2304: 
+[0mCannot find name 'jest'.
+
+    [7m3[0m jest.mock('groq-sdk', () => {
+    [7m [0m [91m~~~~[0m
+    [96msrc/__tests__/GroqService.test.ts[0m:[93m4
+[0m:[93m12[0m - [91merror[0m[90m TS2304: 
+[0mCannot find name 'jest'.
+
+    [7m4[0m     return 
+jest.fn().mockImplementation(() => {
+    [7m [0m [91m           ~~~~[0m
+    [96msrc/__tests__/GroqService.test.ts[0m:[93m8
+[0m:[93m29[0m - [91merror[0m[90m TS2304: 
+[0mCannot find name 'jest'.
+
+    [7m8[0m                     create: 
+jest.fn().mockResolvedValue({
+    [7m [0m [91m                            
+~~~~[0m
+    [96msrc/__tests__/GroqService.test.ts[0m:[93m19
+[0m:[93m1[0m - [91merror[0m[90m TS2593: 
+[0mCannot find name 'describe'. Do you need to 
+install type definitions for a test runner? Try `npm 
+i --save-dev @types/jest` or `npm i --save-dev 
+@types/mocha` and then add 'jest' or 'mocha' to the 
+types field in your tsconfig.
+
+    [7m19[0m describe('GroqService Tests', () => {
+    [7m  [0m [91m~~~~~~~~[0m
+    [96msrc/__tests__/GroqService.test.ts[0m:[93m22
+[0m:[93m5[0m - [91merror[0m[90m TS2304: 
+[0mCannot find name 'beforeAll'.
+
+    [7m22[0m     beforeAll(() => {
+    [7m  [0m [91m    ~~~~~~~~~[0m
+    [96msrc/__tests__/GroqService.test.ts[0m:[93m26
+[0m:[93m5[0m - [91merror[0m[90m TS2593: 
+[0mCannot find name 'it'. Do you need to install 
+type definitions for a test runner? Try `npm i 
+--save-dev @types/jest` or `npm i --save-dev 
+@types/mocha` and then add 'jest' or 'mocha' to the 
+types field in your tsconfig.
+
+    [7m26[0m     it('getInstance should return a 
+singleton', () => {
+    [7m  [0m [91m    ~~[0m
+    [96msrc/__tests__/GroqService.test.ts[0m:[93m28
+[0m:[93m9[0m - [91merror[0m[90m TS2304: 
+[0mCannot find name 'expect'.
+
+    [7m28[0m         
+expect(service).toBe(anotherInstance);
+    [7m  [0m [91m        ~~~~~~[0m
+    [96msrc/__tests__/GroqService.test.ts[0m:[93m31
+[0m:[93m5[0m - [91merror[0m[90m TS2593: 
+[0mCannot find name 'it'. Do you need to install 
+type definitions for a test runner? Try `npm i 
+--save-dev @types/jest` or `npm i --save-dev 
+@types/mocha` and then add 'jest' or 'mocha' to the 
+types field in your tsconfig.
+
+    [7m31[0m     it('generateSuggestions should 
+parse JSON successfully', async () => {
+    [7m  [0m [91m    ~~[0m
+    [96msrc/__tests__/GroqService.test.ts[0m:[93m36
+[0m:[93m9[0m - [91merror[0m[90m TS2304: 
+[0mCannot find name 'expect'.
+
+    [7m36[0m         
+expect(suggestions.length).toBeGreaterThan(0);
+    [7m  [0m [91m        ~~~~~~[0m
+    [96msrc/__tests__/GroqService.test.ts[0m:[93m37
+[0m:[93m9[0m - [91merror[0m[90m TS2304: 
+[0mCannot find name 'expect'.
+
+    [7m37[0m         
+expect(suggestions[0].preview).toBe("Test");
+    [7m  [0m [91m        ~~~~~~[0m
+
+[0m[7m[1m[31m FAIL [39m[22m[27m[0m 
+[2msrc/__tests__/[22m[1mapp.test.ts[22m
+  [1mΓùÅ [22mTest suite failed to run
+
+    [96msrc/__tests__/app.test.ts[0m:[93m4[0m:[93
+m1[0m - [91merror[0m[90m TS2593: [0mCannot find 
+name 'describe'. Do you need to install type 
+definitions for a test runner? Try `npm i --save-dev 
+@types/jest` or `npm i --save-dev @types/mocha` and 
+then add 'jest' or 'mocha' to the types field in your 
+tsconfig.
+
+    [7m4[0m describe('App API Endpoints', () => {
+    [7m [0m [91m~~~~~~~~[0m
+    [96msrc/__tests__/app.test.ts[0m:[93m5[0m:[93
+m5[0m - [91merror[0m[90m TS2593: [0mCannot find 
+name 'it'. Do you need to install type definitions 
+for a test runner? Try `npm i --save-dev @types/jest` 
+or `npm i --save-dev @types/mocha` and then add 
+'jest' or 'mocha' to the types field in your tsconfig.
+
+    [7m5[0m     it('GET /health should return 200 
+OK', async () => {
+    [7m [0m [91m    ~~[0m
+    [96msrc/__tests__/app.test.ts[0m:[93m7[0m:[93
+m9[0m - [91merror[0m[90m TS2304: [0mCannot find 
+name 'expect'.
+
+    [7m7[0m         
+expect(response.status).toBe(200);
+    [7m [0m [91m        ~~~~~~[0m
+    [96msrc/__tests__/app.test.ts[0m:[93m8[0m:[93
+m9[0m - [91merror[0m[90m TS2304: [0mCannot find 
+name 'expect'.
+
+    [7m8[0m         
+expect(response.body.status).toBe('ok');
+    [7m [0m [91m        ~~~~~~[0m
+    [96msrc/__tests__/app.test.ts[0m:[93m11[0m:[9
+3m5[0m - [91merror[0m[90m TS2593: [0mCannot find 
+name 'it'. Do you need to install type definitions 
+for a test runner? Try `npm i --save-dev @types/jest` 
+or `npm i --save-dev @types/mocha` and then add 
+'jest' or 'mocha' to the types field in your tsconfig.
+
+    [7m11[0m     it('POST /api/v1/suggestions 
+should return 401 without API Key', async () => {
+    [7m  [0m [91m    ~~[0m
+    [96msrc/__tests__/app.test.ts[0m:[93m15[0m:[9
+3m9[0m - [91merror[0m[90m TS2304: [0mCannot find 
+name 'expect'.
+
+    [7m15[0m         
+expect(response.status).toBe(401);
+    [7m  [0m [91m        ~~~~~~[0m
+    [96msrc/__tests__/app.test.ts[0m:[93m16[0m:[9
+3m9[0m - [91merror[0m[90m TS2304: [0mCannot find 
+name 'expect'.
+
+    [7m16[0m         
+expect(response.body.message).toContain('Missing or 
+invalid Groq API Key');
+    [7m  [0m [91m        ~~~~~~[0m
+    [96msrc/__tests__/app.test.ts[0m:[93m19[0m:[9
+3m5[0m - [91merror[0m[90m TS2593: [0mCannot find 
+name 'it'. Do you need to install type definitions 
+for a test runner? Try `npm i --save-dev @types/jest` 
+or `npm i --save-dev @types/mocha` and then add 
+'jest' or 'mocha' to the types field in your tsconfig.
+
+    [7m19[0m     it('POST /api/v1/chat should 
+return 401 without API Key', async () => {
+    [7m  [0m [91m    ~~[0m
+    [96msrc/__tests__/app.test.ts[0m:[93m24[0m:[9
+3m9[0m - [91merror[0m[90m TS2304: [0mCannot find 
+name 'expect'.
+
+    [7m24[0m         
+expect(response.status).toBe(401);
+    [7m  [0m [91m        ~~~~~~[0m
+    [96msrc/__tests__/app.test.ts[0m:[93m27[0m:[9
+3m5[0m - [91merror[0m[90m TS2593: [0mCannot find 
+name 'it'. Do you need to install type definitions 
+for a test runner? Try `npm i --save-dev @types/jest` 
+or `npm i --save-dev @types/mocha` and then add 
+'jest' or 'mocha' to the types field in your tsconfig.
+
+    [7m27[0m     it('POST /api/v1/transcribe should 
+return 401 without API Key', async () => {
+    [7m  [0m [91m    ~~[0m
+    [96msrc/__tests__/app.test.ts[0m:[93m29[0m:[9
+3m9[0m - [91merror[0m[90m TS2304: [0mCannot find 
+name 'expect'.
+
+    [7m29[0m         
+expect(response.status).toBe(401);
+    [7m  [0m [91m        ~~~~~~[0m
+
+[1mTest Suites: [22m[1m[31m2 failed[39m[22m, 2 
+total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        3.524 s
+[2mRan all test suites[22m[2m.[22m
+[1mForce exiting Jest: [22mHave you considered 
+using `--detectOpenHandles` to detect async 
+operations that kept running after all tests finished?

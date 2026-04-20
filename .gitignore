@@ -1,24 +1,49 @@
-# Compiled class file
-*.class
+# ─── Dependencies ────────────────────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
 
-# Log file
+# ─── Environment Variables (NEVER commit secrets) ────────────────────────────
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env
+
+# ─── Build Output ────────────────────────────────────────────────────────────
+dist/
+build/
+backend/dist/
+
+# ─── TypeScript ──────────────────────────────────────────────────────────────
+*.tsbuildinfo
+
+# ─── Logs ────────────────────────────────────────────────────────────────────
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
 
-# BlueJ files
-*.ctxt
+# ─── Coverage & Test Output ──────────────────────────────────────────────────
+coverage/
+.nyc_output/
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# ─── OS & Editor ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+# ─── Vite ────────────────────────────────────────────────────────────────────
+.vite/
+vite.config.ts.timestamp-*
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# ─── Misc ────────────────────────────────────────────────────────────────────
+.cache/
