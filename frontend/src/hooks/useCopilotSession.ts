@@ -90,9 +90,8 @@ export function useCopilotSession(settings: Settings) {
       // If triggered by a suggestion click, immediately seed the prefix so it shows instantly
       const assistantId = uuidv4();
       streamingMessageIdRef.current = assistantId;
-      const detailedPrefix = suggestion
-        ? `Detailed answer to: "${suggestion.preview}"\n\n`
-        : '';
+      const previewText = suggestion ? suggestion.preview : userText;
+      const detailedPrefix = `Detailed answer to: "${previewText}"\n\n`;
       const assistantMsg: ChatMessage = {
         id: assistantId,
         role: 'assistant',

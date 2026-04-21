@@ -115,7 +115,7 @@ Each object must have:
             
             const defaultChatPrompt = "You are TwinMind, an elite AI meeting executive assistant. Provide concise, highly valuable, and direct answers to the user's chat questions. Base your answers firmly on the transcript context. Do not output conversational filler.";
             
-            const defaultOnClickPrompt = "You are TwinMind. The user clicked a live suggestion to request a specific, structured answer. Provide a CONCISE, well-formatted response. Use short bullet points where possible. Do NOT output a massive essay. Get straight to the point based firmly on the transcript context.";
+            const defaultOnClickPrompt = "You are TwinMind. The user clicked a live suggestion to request a specific, structured answer. Provide a CONCISE, well-formatted response. Use short bullet points ONLY. Do absolutely NOT output Markdown tables, massive essays, or conversational filler. Get straight to the point based firmly on the transcript context.";
 
             const dynamicPrompt = props.customPrompt || (isOnClickDeepDive ? defaultOnClickPrompt : defaultChatPrompt);
             
@@ -135,7 +135,7 @@ Each object must have:
                 messages,
                 model: "openai/gpt-oss-120b",
                 temperature: isOnClickDeepDive ? 0.5 : 0.7,
-                max_tokens: isOnClickDeepDive ? 300 : 600,
+                max_tokens: 800,
                 stream: true,
             });
 
