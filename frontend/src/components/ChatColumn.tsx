@@ -14,7 +14,7 @@ export function ChatColumn({ messages, isLoading, onSend }: Props) {
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+    bottomRef.current?.scrollIntoView({ behavior: 'auto' });
   }, [messages]);
 
   const handleSend = () => {
@@ -57,13 +57,16 @@ export function ChatColumn({ messages, isLoading, onSend }: Props) {
                 <>
                   {/* Row: YOU · CATEGORY */}
                   <div className="chat-msg-meta">
-                    <span className="chat-role-you">YOU</span>
+                    <span className="chat-role-label">YOU</span>
                     {msg.label && (
-                      <span className="chat-category-inline">{msg.label}</span>
+                      <>
+                        <span className="chat-role-label">·</span>
+                        <span className="chat-category-inline">{msg.label}</span>
+                      </>
                     )}
                   </div>
                   {/* User bubble */}
-                  <div className="chat-bubble-user">
+                  <div className="chat-bubble">
                     {msg.content}
                   </div>
                 </>
@@ -71,10 +74,10 @@ export function ChatColumn({ messages, isLoading, onSend }: Props) {
                 <>
                   {/* Row: ASSISTANT */}
                   <div className="chat-msg-meta">
-                    <span className="chat-role-assistant">ASSISTANT</span>
+                    <span className="chat-role-label">ASSISTANT</span>
                   </div>
-                  {/* Assistant text — no box, bare markdown */}
-                  <div className={`chat-text-assistant ${msg.isStreaming ? 'chat-text--streaming' : ''}`}>
+                  {/* Assistant bubble */}
+                  <div className={`chat-bubble ${msg.isStreaming ? 'chat-text--streaming' : ''}`}>
                     <ReactMarkdown>{msg.content}</ReactMarkdown>
                     {msg.isStreaming && <span className="cursor-blink">▌</span>}
                   </div>
