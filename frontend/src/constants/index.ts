@@ -28,7 +28,7 @@ export const DEFAULT_SETTINGS = {
   chatContextChunks: 10,          // full session context for chat
 };
 
-export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8080';
+export const BACKEND_URL = import.meta.env.PROD ? '/_/backend' : 'http://localhost:8080';
 export const CHUNK_INTERVAL_MS = 20_000;       // 20s subsequent chunks
 export const FIRST_CHUNK_INTERVAL_MS = 10_000; // 10s first chunk
 export const AUTO_REFRESH_INTERVAL_MS = 30_000;
