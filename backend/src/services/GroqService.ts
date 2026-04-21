@@ -113,7 +113,7 @@ Each object must have:
             // Handling the "Separate Prompt" Requirement gracefully here if the frontend doesn't pass one
             const isOnClickDeepDive = !!props.suggestionContext;
             
-            const defaultChatPrompt = "You are TwinMind, an elite AI meeting executive assistant. Provide concise, highly valuable, and direct answers to the user's chat questions. Base your answers firmly on the transcript context. Do not output conversational filler.";
+            const defaultChatPrompt = "You are TwinMind, an elite AI meeting executive assistant. Provide concise, highly valuable, and direct answers to the user's manual chat questions. Base your answers firmly on the transcript context provided. Use short bullet points ONLY. Do absolutely NOT output Markdown tables, massive essays, or conversational filler.";
             
             const defaultOnClickPrompt = "You are TwinMind. The user clicked a live suggestion to request a specific, structured answer. Provide a CONCISE, well-formatted response. Use short bullet points ONLY. Do absolutely NOT output Markdown tables, massive essays, or conversational filler. Get straight to the point based firmly on the transcript context.";
 
