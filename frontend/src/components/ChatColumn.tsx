@@ -41,13 +41,6 @@ export function ChatColumn({ messages, isLoading, onSend }: Props) {
       <div className="chat-messages">
         {messages.length === 0 ? (
           <div className="chat-empty">
-            <div className="chat-info-box">
-              <p>
-                Clicking a suggestion adds it to the chat and streams a detailed answer (separate
-                prompt, more context). User can also type questions directly. One continuous chat per
-                session — no login, no persistence.
-              </p>
-            </div>
             <p className="empty-hint">Click a suggestion or type a question below.</p>
           </div>
         ) : (

@@ -43,15 +43,9 @@ export function TranscriptColumn({ status, transcript, onStart, onStop }: Props)
           {isRecording
             ? 'Recording… click to stop.'
             : transcript.length > 0
-            ? 'Stopped. Click to resume.'
-            : 'Click mic to start. Transcript appends every ~30s.'}
+              ? 'Stopped. Click to resume.'
+              : 'Click mic to start. Transcript appends every ~30s.'}
         </p>
-      </div>
-
-      {/* Description box — matches the reference info panel */}
-      <div className="col-description-box">
-        The transcript scrolls and appends new chunks every ~30 seconds while recording. Use the mic
-        button to start/stop. Include an export button (not shown) so we can pull the full session.
       </div>
 
       <div className="transcript-list">

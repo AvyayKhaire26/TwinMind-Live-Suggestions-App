@@ -45,16 +45,6 @@ export function SuggestionsColumn({
       <div className="suggestions-scroll">
         {batches.length === 0 ? (
           <div className="suggestions-empty-state">
-            <p className="info-box">
-              On reload (or auto every ~30s), generate <strong>3 fresh suggestions</strong> from
-              recent transcript context. New batch appears at the top; older batches push down. Each
-              is a tappable card: a{' '}
-              <span className="highlight-blue">question to ask</span>,{' '}
-              <span className="highlight-purple">a talking point</span>,{' '}
-              <span className="highlight-green">an answer</span>, or a{' '}
-              <span className="highlight-yellow">fact-check</span>. The preview alone should already
-              be useful.
-            </p>
             <p className="empty-hint">Suggestions appear here once recording starts.</p>
           </div>
         ) : (
